@@ -55,6 +55,10 @@ public class EnemyAI : MonoBehaviour
                 WanderingBehavior();
                 break;
 
+            case AIState.patrolling:
+                PatrollingBehavior();
+                break;
+
             case AIState.attacking:
                 AttackingBehavior();
                 break;

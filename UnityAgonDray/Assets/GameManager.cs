@@ -2,12 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unlock : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-
-    public Animator animator;
-    public string param;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +13,9 @@ public class Unlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
+        if (Input.GetKey(KeyCode.Escape))
         {
-            animator.SetBool(param, true);
+            Application.Quit();
         }
     }
 }
