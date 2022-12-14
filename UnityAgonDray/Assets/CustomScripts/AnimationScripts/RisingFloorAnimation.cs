@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RisingFloorAnimation : MonoBehaviour
+public class Unlock : MonoBehaviour
 {
 
     public Animator animator;
@@ -25,14 +25,6 @@ public class RisingFloorAnimation : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             animator.SetBool(param, true);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            animator.SetBool(param, false);
         }
     }
 }
